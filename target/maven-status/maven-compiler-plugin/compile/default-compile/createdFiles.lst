@@ -1,0 +1,7 @@
+com\mycompany\tareatecnicas\Control\run.class
+com\mycompany\tareatecnicas\Models\Persona.class
+com\mycompany\tareatecnicas\Control\ColeccionContactos.class
+com\mycompany\tareatecnicas\Control\AgregarContacto.class
+com\mycompany\tareatecnicas\Models\ContactoMujer.class
+com\mycompany\tareatecnicas\Models\ContactoHombre.class
+com\mycompany\tareatecnicas\Models\Contacto.class
