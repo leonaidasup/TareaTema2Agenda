@@ -12,6 +12,9 @@ import java.text.SimpleDateFormat;
 public class ContactoMujer extends Persona implements Contacto {
     private int intencion;
 
+    public ContactoMujer() {
+    }
+    
     public ContactoMujer(String nombre, String telelfono, int año, int mes, int dia, int intencion) {
         super(nombre, telelfono, año, mes, dia);
         this.intencion = intencion;
@@ -43,8 +46,8 @@ public class ContactoMujer extends Persona implements Contacto {
     
     @Override
     public String toString() {
-        return "Mujer --> " + "nombre = " + this.getNombre() + ", telelfono = " +
-                this.getTelefonoContacto() + ", fecha = " + this.getFechaContancto() +
-                ", intension = " + this.getIntension();
+        return "{" + "nombre: " + this.getNombre() + ", telelfono: " +
+                this.getTelefonoContacto() + ", fecha: " + this.getFechaContancto() +
+                ", intencion: " + this.getIntension()+"}";
     }
 }

@@ -13,6 +13,9 @@ import java.util.Calendar;
 public class ContactoHombre extends Persona implements Contacto {
     private SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd");
 
+    public ContactoHombre() {
+    }
+    
     public ContactoHombre(String nombre, String telelfono, int año, int mes, int dia) {
         super(nombre, telelfono, año, mes, dia);
     }
@@ -35,8 +38,9 @@ public class ContactoHombre extends Persona implements Contacto {
     
     @Override
     public String toString() {
-        return "Hombre --> " + "nombre = " + this.getNombre() + ", telelfono = " 
-                + this.getTelefonoContacto() + ", fecha = " + this.getFechaContancto();
+        return "{" + "nombre: " + this.getNombre() + ", telelfono: " +
+                this.getTelefonoContacto() + ", fecha: " + this.getFechaContancto() +
+                ", intencion: -1}";
     }
     
 }
