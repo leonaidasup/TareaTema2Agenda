@@ -35,7 +35,7 @@ public class ContactoHombre extends Persona implements Contacto {
         SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd");
         return formatoFecha.format(this.getFecha().getTime());
     }
-    
+ 
     @Override
     public String toString() {
         return "{" + "nombre: " + this.getNombre() + ", telelfono: " +
@@ -43,4 +43,9 @@ public class ContactoHombre extends Persona implements Contacto {
                 ", intencion: -1}";
     }
     
+    public String toStringJSON() {
+        return "{" + "\"nombre\": \"" + this.getNombre() + "\", \"telelfono\": \"" +
+                this.getTelefonoContacto() + "\", \"fecha\": \"" + this.getFechaContancto() +
+                "\", \"intencion\": -1}";
+    }
 }

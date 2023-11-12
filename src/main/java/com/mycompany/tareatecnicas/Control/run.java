@@ -15,10 +15,10 @@ import com.mycompany.tareatecnicas.Models.Persona;
  */
 public class run {
     
-    public static void main(String[] args) {
-        ContactoMujer mujer = new ContactoMujer("mariana", "5555", 2025, 5, 5, 0);
+    public static void main(String[] args) {  
+        ContactoHombre hombre = new ContactoHombre("mariano", "7777", 2025, 5, 5);
         PersonaDAO perdao = new PersonaDAO();
-        perdao.agregar(mujer);
+        perdao.agregar(hombre);
         System.out.println(perdao.obtenerPersonas());
         
         /*ContactoMujer mujer = new ContactoMujer("mujer", "132123", 1, 1, 1, 1);

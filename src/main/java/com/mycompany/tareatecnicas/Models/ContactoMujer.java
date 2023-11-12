@@ -50,4 +50,10 @@ public class ContactoMujer extends Persona implements Contacto {
                 this.getTelefonoContacto() + ", fecha: " + this.getFechaContancto() +
                 ", intencion: " + this.getIntension()+"}";
     }
+    
+    public String toStringJSON() {
+        return "{" + "\"nombre\": \"" + this.getNombre() + "\", \"telelfono\": \"" +
+                this.getTelefonoContacto() + "\", \"fecha\": \"" + this.getFechaContancto() +
+                "\", \"intencion\": " + this.getIntension()+"}";
+    }
 }
