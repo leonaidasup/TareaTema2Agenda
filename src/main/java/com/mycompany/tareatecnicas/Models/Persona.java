@@ -12,8 +12,11 @@ import java.util.Calendar;
 public class Persona {
     private String nombre;
     private String telelfono;
-    private final Calendar fecha = Calendar.getInstance();
+    private Calendar fecha = Calendar.getInstance();
 
+    public Persona() {
+    }
+    
     public Persona(String nombre, String telelfono, int año, int mes, int dia) {
         this.nombre = nombre;
         this.telelfono = telelfono;
@@ -43,5 +46,7 @@ public class Persona {
     public void setFecha(int año, int mes, int dia) {
         this.fecha.set(año, mes, dia);
     }
-
+    public void setFecha(Calendar cal) {
+        this.fecha = cal;
+    }
 }
