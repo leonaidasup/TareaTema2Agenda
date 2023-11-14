@@ -8,8 +8,8 @@ import com.mycompany.tareatecnicas.Models.Persona;
  *
  * @author leona
  */
-public class AgregarContacto {
+public class AgregarContacto {  
     public static void agregarContacto(Persona contacto){
-        ColeccionContactos.addListaContactos(contacto);
+        ColeccionContactos.listaContactos.add(contacto);
     }
 }

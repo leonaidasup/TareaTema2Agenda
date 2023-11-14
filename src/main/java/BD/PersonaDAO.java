@@ -17,9 +17,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.sql.Date;
-import java.util.Calendar;
 import java.util.Properties;
+import javax.swing.JOptionPane;
 
 public class PersonaDAO {
 
@@ -52,6 +51,34 @@ public class PersonaDAO {
                 /* ignored */ }
         }
     }
+    
+    public void eliminar(Persona p) {
+        try {
+            conn = conexion.getConexion();
+            Statement st = conn.createStatement();
+            String query = "DELETE FROM contactos WHERE Nombre=? AND Teléfono=?";
+            ps = conn.prepareStatement(query);
+            Gson gson = new Gson();
+            String infomia = p.toString();
+            Properties properties = gson.fromJson(infomia, Properties.class);
+            ps.setString(1, p.getNombre());
+            ps.setString(2, p.getTelelfono());
+            int res = ps.executeUpdate();
+            if (res > 0) {
+                JOptionPane.showMessageDialog(null, "El usuario " + p.getNombre() + " se eliminó.");
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "El usuario " + p.getNombre() + " no se eliminó.");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                rs.close();
+            } catch (Exception e) {
+                /* ignored */ }
+        }
+    }
 
     public ArrayList<Persona> obtenerPersonas() {
         ArrayList<Persona> personas = new ArrayList<>();
@@ -63,9 +90,7 @@ public class PersonaDAO {
 
             while (rs.next()) {
                 int intencion = rs.getInt("Intencion");
-                Date encuentro = rs.getDate("Encuentro");
-                Calendar cal = Calendar.getInstance();
-                cal.setTime(encuentro);
+                String cal = rs.getString("Encuentro");
                 String nombre= rs.getString("Nombre");
                 String telefono = rs.getString("Teléfono");
                 if (intencion >= 0) {

@@ -5,28 +5,26 @@
 package com.mycompany.tareatecnicas.Control;
 import com.mycompany.tareatecnicas.Models.Persona;
 import java.util.ArrayList;
+import BD.PersonaDAO;
 /**
  *
  * @author leona
  */
 public class ColeccionContactos {
-    private static final ArrayList<Persona> listaContactos = new ArrayList<>();
+    protected static ArrayList<Persona> listaContactos = new PersonaDAO().obtenerPersonas();
 
-    public static Persona buscarContacto(String nombre){
+    public static String buscarContacto(String nombre){
         for (Persona contacto : listaContactos){
             if (contacto.getNombre().equals(nombre)){
-                return contacto;
+                return contacto.toString();
             }
         }
-        return null;
+        return "No se encontró el usuario.";
     }
 
     public static ArrayList<Persona> getListaContactos() {
+        listaContactos = new PersonaDAO().obtenerPersonas();
         return listaContactos;
     }
 
-    public static void addListaContactos(Persona contacto) {
-        ColeccionContactos.listaContactos.add(contacto);
-    }
-    
 }

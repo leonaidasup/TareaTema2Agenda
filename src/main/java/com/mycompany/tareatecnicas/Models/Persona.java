@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.tareatecnicas.Models;
-import java.util.Calendar;
 
 /**
  *
@@ -12,15 +11,15 @@ import java.util.Calendar;
 public class Persona {
     private String nombre;
     private String telelfono;
-    private Calendar fecha = Calendar.getInstance();
+    private String fecha;
 
     public Persona() {
     }
     
-    public Persona(String nombre, String telelfono, int año, int mes, int dia) {
+    public Persona(String nombre, String telelfono, String fecha) {
         this.nombre = nombre;
         this.telelfono = telelfono;
-        this.fecha.set(año, mes, dia);
+        this.fecha = fecha;
     }
 
     public String getNombre() {
@@ -39,14 +38,11 @@ public class Persona {
         this.telelfono = telelfono;
     }
 
-    public Calendar getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(int año, int mes, int dia) {
-        this.fecha.set(año, mes, dia);
-    }
-    public void setFecha(Calendar cal) {
-        this.fecha = cal;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 }
