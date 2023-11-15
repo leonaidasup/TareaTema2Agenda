@@ -4,7 +4,7 @@
  */
 package com.mycompany.tareatecnicas.View;
 
-import com.mycompany.tareatecnicas.Control.PruebaPDF;
+import PDF.PruebaPDF;
 import com.google.gson.reflect.TypeToken;
 import com.mycompany.tareatecnicas.Models.ContactoMujer;
 import java.io.BufferedReader;
@@ -56,8 +56,6 @@ public class Menu extends javax.swing.JFrame {
         buscarcontactobutton = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         actualizarbutton = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        eliminarbutton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
@@ -114,15 +112,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("Eliminar");
-
-        eliminarbutton.setText("Eliminar");
-        eliminarbutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eliminarbuttonActionPerformed(evt);
-            }
-        });
-
         jLabel7.setText("Generar Json");
 
         jButton1.setText("Generar");
@@ -147,17 +136,14 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(eliminarbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(buscarcontactobutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(actualizarbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(agregarbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(crearpdfbutton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(buscarcontactobutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(actualizarbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(agregarbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(crearpdfbutton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(41, 41, 41)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
                 .addGap(27, 27, 27))
@@ -181,10 +167,6 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
                             .addComponent(buscarcontactobutton))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(eliminarbutton))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
@@ -249,6 +231,7 @@ public class Menu extends javax.swing.JFrame {
         java.lang.reflect.Type listType = new TypeToken<List<ContactoMujer>>(){}.getType();
 
         PruebaPDF.crearTablaDesdeJSON(contenidoJson, listType);
+        JOptionPane.showMessageDialog(null, "Se guardó en .pdf con exito.");
     }//GEN-LAST:event_crearpdfbuttonActionPerformed
 
     private void buscarcontactobuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarcontactobuttonActionPerformed
@@ -259,15 +242,10 @@ public class Menu extends javax.swing.JFrame {
        actualizar();
     }//GEN-LAST:event_actualizarbuttonActionPerformed
 
-    private void eliminarbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarbuttonActionPerformed
-        new PersonaDAO().eliminar(new Persona(JOptionPane.showInputDialog("Ingrese nombre:"),
-                                    JOptionPane.showInputDialog("Ingrese telefono:"), "0000-00-00"));
-    }//GEN-LAST:event_eliminarbuttonActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
             GrabarJson.Grabar();
-            JOptionPane.showMessageDialog(null, "Se guardó en .Json con exito.");
+            JOptionPane.showMessageDialog(null, "Se guardó en .json con exito.");
         } catch (IOException ex) {
             Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParseException ex) {
@@ -315,14 +293,12 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton agregarbutton;
     private javax.swing.JButton buscarcontactobutton;
     private javax.swing.JButton crearpdfbutton;
-    private javax.swing.JButton eliminarbutton;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

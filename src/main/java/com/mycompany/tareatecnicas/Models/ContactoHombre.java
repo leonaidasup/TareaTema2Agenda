@@ -12,11 +12,11 @@ public class ContactoHombre extends Persona implements Contacto {
 
     public ContactoHombre() {
     }
-    
+
     public ContactoHombre(String nombre, String telelfono, String fecha) {
         super(nombre, telelfono, fecha);
     }
-   
+
     @Override
     public String getNombreContacto() {
         return this.getNombre();
@@ -31,14 +31,14 @@ public class ContactoHombre extends Persona implements Contacto {
     public String getFechaContancto() {
         return this.getFecha();
     }
- 
+
     @Override
     public String toString() {
-        return "{" + "nombre: " + this.getNombre() + ", telelfono: " +
-                this.getTelefonoContacto() + ", fecha: " + this.getFechaContancto() +
-                ", intencion: -1}";
+        return "{" + "\"nombre\": \"" + this.getNombre() + "\", \"telelfono\": \"" +
+                this.getTelefonoContacto() + "\", \"fecha\": \"" + this.getFechaContancto() +
+                "\", \"intencion\": -1}";
     }
-    
+
     public String toStringJSON() {
         return "{" + "\"nombre\": \"" + this.getNombre() + "\", \"telelfono\": \"" +
                 this.getTelefonoContacto() + "\", \"fecha\": \"" + this.getFechaContancto() +

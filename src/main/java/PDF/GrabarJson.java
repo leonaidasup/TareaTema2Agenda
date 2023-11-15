@@ -21,8 +21,8 @@ import java.util.Properties;
 public class GrabarJson {
 
     public static void Grabar() throws IOException, ParseException {
-       Gson gson = new Gson();
-        String fileJson2 = "C:\\Users\\leona\\OneDrive\\Documentos\\NetBeansProjects\\TareaTema2Agenda\\src\\resources\\info.json";
+        Gson gson = new Gson();
+        String fileJson2 = "src\\resources\\info.json";
 
         PersonaDAO perdao = new PersonaDAO();
 
@@ -36,7 +36,6 @@ public class GrabarJson {
                 String infomia = persona.toString();
                 Properties properties = gson.fromJson(infomia, Properties.class);
                 String cal = properties.getProperty("fecha");
- 
 
                 if (Integer.parseInt(properties.getProperty("intencion")) >= 0) {
                     ContactoMujer person = new ContactoMujer();

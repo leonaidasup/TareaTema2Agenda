@@ -15,7 +15,6 @@ com\mycompany\tareatecnicas\Control\ColeccionContactos.class
 BD\PersonaDAO.class
 com\mycompany\tareatecnicas\View\Menu$1.class
 PDF\PruebaPDF$1.class
-com\mycompany\tareatecnicas\View\Menu$8.class
 com\mycompany\tareatecnicas\View\Menu$3.class
 com\mycompany\tareatecnicas\View\Agregar$1.class
 com\mycompany\tareatecnicas\View\Menu.class

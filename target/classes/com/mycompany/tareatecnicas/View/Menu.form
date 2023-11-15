@@ -59,14 +59,18 @@
                       <Component id="jLabel7" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                       <Component id="jLabel5" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
                       <Component id="jLabel3" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                      <Component id="jLabel6" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="buscarcontactobutton" max="32767" attributes="0"/>
-                      <Component id="actualizarbutton" max="32767" attributes="0"/>
-                      <Component id="agregarbutton" alignment="0" max="32767" attributes="0"/>
-                      <Component id="crearpdfbutton" alignment="1" max="32767" attributes="0"/>
-                      <Component id="jButton1" max="32767" attributes="0"/>
+                      <Component id="eliminarbutton" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="buscarcontactobutton" max="32767" attributes="0"/>
+                          <Component id="actualizarbutton" max="32767" attributes="0"/>
+                          <Component id="agregarbutton" alignment="0" max="32767" attributes="0"/>
+                          <Component id="crearpdfbutton" alignment="1" max="32767" attributes="0"/>
+                          <Component id="jButton1" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" pref="383" max="32767" attributes="0"/>
@@ -95,6 +99,11 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="buscarcontactobutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="eliminarbutton" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -203,6 +212,19 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="actualizarbuttonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Eliminar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="eliminarbutton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Eliminar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarbuttonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
