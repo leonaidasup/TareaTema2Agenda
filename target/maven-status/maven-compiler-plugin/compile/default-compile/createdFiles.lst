@@ -1,5 +1,6 @@
 com\mycompany\tareatecnicas\View\Menu$2.class
 com\mycompany\tareatecnicas\View\Agregar$2.class
+BD\NewClass.class
 PDF\GrabarJson.class
 BD\BD.class
 com\mycompany\tareatecnicas\View\Menu$7.class
@@ -8,8 +9,6 @@ com\mycompany\tareatecnicas\View\Agregar$5.class
 PDF\PruebaPDF.class
 com\mycompany\tareatecnicas\Control\AgregarContacto.class
 com\mycompany\tareatecnicas\View\Agregar$3.class
-com\mycompany\tareatecnicas\Control\PruebaPDF$1.class
-com\mycompany\tareatecnicas\Control\PruebaPDF.class
 com\mycompany\tareatecnicas\Models\Persona.class
 com\mycompany\tareatecnicas\Control\ColeccionContactos.class
 BD\PersonaDAO.class
