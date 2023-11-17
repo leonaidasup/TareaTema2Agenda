@@ -51,25 +51,31 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel2" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" pref="97" max="-2" attributes="0"/>
-                      <Component id="jLabel7" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
-                      <Component id="jLabel5" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
-                      <Component id="jLabel3" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel2" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                              <Component id="jLabel4" min="-2" pref="97" max="-2" attributes="0"/>
+                              <Component id="jLabel7" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="jLabel3" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="buscarcontactobutton" max="32767" attributes="0"/>
+                              <Component id="agregarbutton" alignment="0" pref="83" max="32767" attributes="0"/>
+                              <Component id="crearpdfbutton" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jButton1" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" pref="383" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="actualizarbutton" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="buscarcontactobutton" max="32767" attributes="0"/>
-                      <Component id="actualizarbutton" max="32767" attributes="0"/>
-                      <Component id="agregarbutton" alignment="0" max="32767" attributes="0"/>
-                      <Component id="crearpdfbutton" alignment="1" max="32767" attributes="0"/>
-                      <Component id="jButton1" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" pref="383" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -86,12 +92,7 @@
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               <Component id="agregarbutton" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="actualizarbutton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="buscarcontactobutton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -112,7 +113,9 @@
                           <Component id="jScrollPane1" min="-2" pref="263" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="36" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="actualizarbutton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="12" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -166,11 +169,35 @@
                     <Column editable="true" title="Telefono" type="java.lang.Object">
                       <Data value="324"/>
                     </Column>
-                    <Column editable="true" title="Estado" type="java.lang.Object">
+                    <Column editable="true" title="Fecha" type="java.lang.Object">
                       <Data value="0"/>
                     </Column>
-                    <Column editable="true" title="Fecha" type="java.lang.Object"/>
+                    <Column editable="true" title="Intencion" type="java.lang.Object"/>
                   </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
                 </Property>
                 <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
@@ -191,11 +218,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buscarcontactobuttonActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Actualizar"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="actualizarbutton">
           <Properties>
