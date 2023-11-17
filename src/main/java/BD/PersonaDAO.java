@@ -61,8 +61,8 @@ public class PersonaDAO {
             Gson gson = new Gson();
             String infomia = p.toString();
             Properties properties = gson.fromJson(infomia, Properties.class);
-            ps.setString(1, p.getNombre());
-            ps.setString(2, p.getTelelfono());
+            ps.setString(1, properties.getProperty("nombre"));
+            ps.setString(2, properties.getProperty("telelfono"));
             int res = ps.executeUpdate();
             if (res > 0) {
                 JOptionPane.showMessageDialog(null, "El usuario " + p.getNombre() + " se eliminó.");
@@ -70,6 +70,35 @@ public class PersonaDAO {
             else{
                 JOptionPane.showMessageDialog(null, "El usuario " + p.getNombre() + " no se eliminó.");
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                rs.close();
+            } catch (Exception e) {
+                /* ignored */ }
+        }
+    }
+    
+    public void actualizarPerson(Persona nueva, Persona anterior){
+        try {
+            conn = conexion.getConexion();
+            Statement st = conn.createStatement();
+            String query = "UPDATE contactos SET Nombre = ?, Teléfono = ?, Intencion = ?, Encuentro = ? WHERE Nombre = ? AND Teléfono = ?";
+            ps = conn.prepareStatement(query);
+            Gson gson = new Gson();
+            String infomia = nueva.toString();
+            Properties properties = gson.fromJson(infomia, Properties.class);
+            ps.setString(1, properties.getProperty("nombre"));
+            ps.setString(2, properties.getProperty("telelfono"));
+            ps.setInt(3, Integer.parseInt(properties.getProperty("intencion")));
+            ps.setString(4, properties.getProperty("fecha"));
+            infomia = anterior.toString();
+            properties = gson.fromJson(infomia, Properties.class);
+            ps.setString(5, properties.getProperty("nombre"));
+            ps.setString(6, properties.getProperty("telelfono"));
+            ps.executeUpdate();
+            
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
