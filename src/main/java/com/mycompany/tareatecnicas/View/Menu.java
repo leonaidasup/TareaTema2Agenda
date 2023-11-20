@@ -20,7 +20,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import BD.PersonaDAO;
-import static PDF.PruebaPDF.crearTablaDesdeJSON;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -305,8 +304,8 @@ public final class Menu extends javax.swing.JFrame {
     private void eliminarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarButtonActionPerformed
         int seleccion = tb.getSelectedRow();
         if (seleccion != -1) {
-            String add = (new PersonaDAO().eliminar(new ContactoMujer((String) tb.getValueAt(seleccion, 0), (String) tb.getValueAt(seleccion, 1), "", -1)))? "":"no";
-            JOptionPane.showMessageDialog(null, "El usuario " + (String) tb.getValueAt(seleccion, 0) + " " + add+ " se eliminó.");
+            String add = (new PersonaDAO().eliminar(new ContactoMujer((String) tb.getValueAt(seleccion, 0), (String) tb.getValueAt(seleccion, 1), "", -1)))? "":" no";
+            JOptionPane.showMessageDialog(null, "El usuario " + (String) tb.getValueAt(seleccion, 0) + add + " se eliminó.");
             actualizar();
         } else {
             JOptionPane.showMessageDialog(null, "Seleccione algun usuario de la tabla.");

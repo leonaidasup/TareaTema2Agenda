@@ -48,7 +48,7 @@ public class Agregar extends javax.swing.JFrame {
             }
         });
 
-        intencionbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Intencion", "Muy buena", "Buena", "Neutra" }));
+        intencionbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Intencion", "Neutra", "Buena", "Muy buena" }));
         intencionbox.setEnabled(false);
         intencionbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,7 +198,7 @@ public class Agregar extends javax.swing.JFrame {
                 if (intencion == 0){
                     JOptionPane.showMessageDialog(null, "Decida tu intencion.");
                 } else {
-                    ContactoMujer contacto = new ContactoMujer(nombre, telefono, añoFecha + "-" + mesFecha + "-" + diaFecha, intencion);
+                    ContactoMujer contacto = new ContactoMujer(nombre, telefono, añoFecha + "-" + mesFecha + "-" + diaFecha, intencion - 1);
                     AgregarContacto.agregarContacto(contacto);
                     new PersonaDAO().agregar(contacto);
                 }               

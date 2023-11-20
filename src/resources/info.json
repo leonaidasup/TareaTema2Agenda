@@ -4,7 +4,5 @@
 {"nombre": "hola", "telelfono": "3121", "fecha": "0003-02-01", "intencion": -1},
 {"nombre": "1231", "telelfono": "1321", "fecha": "0100-01-01", "intencion": -1},
 {"nombre": "sofia", "telelfono": "1239", "fecha": "2024-01-07", "intencion": 2},
-{"nombre": "ro", "telelfono": "ro", "fecha": "0003-02-01", "intencion": -1},
-{"nombre": "123", "telelfono": "1231", "fecha": "2033-02-01", "intencion": -1},
-{"nombre": "nueva", "telelfono": "nueva", "fecha": "0003-02-01", "intencion": 2}
+{"nombre": "Ana", "telelfono": "312313", "fecha": "2033-02-01", "intencion": 2}
 ]

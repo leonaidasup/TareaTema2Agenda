@@ -14,7 +14,7 @@ import BD.PersonaDAO;
  * @author leona
  */
 public class Editar extends javax.swing.JFrame {
-    private String[] res_data = new String[3];
+    private final String[] res_data = new String[3];
     private final int res_intencion;
     
     public Editar(String nombre, String telefono, String fecha, int intencion) {
@@ -28,6 +28,7 @@ public class Editar extends javax.swing.JFrame {
         if (intencion >= 0) {
             mujercheck.setSelected(true);
             intencionbox.setSelectedIndex(intencion);
+            intencionbox.setEnabled(true);
         }
         this.res_data[0] = nombre;
         this.res_data[1] = telefono;
@@ -66,7 +67,7 @@ public class Editar extends javax.swing.JFrame {
             }
         });
 
-        intencionbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Intencion", "Muy buena", "Buena", "Neutra" }));
+        intencionbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Intencion", "Neutra", "Buena", "Muy buena" }));
         intencionbox.setEnabled(false);
         intencionbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,7 +231,7 @@ public class Editar extends javax.swing.JFrame {
                 if (intencion == 0){
                     JOptionPane.showMessageDialog(null, "Decida tu intencion.");
                 } else {
-                    ContactoMujer contacto = new ContactoMujer(nombre, telefono, añoFecha + "-" + mesFecha + "-" + diaFecha, intencion);
+                    ContactoMujer contacto = new ContactoMujer(nombre, telefono, añoFecha + "-" + mesFecha + "-" + diaFecha, intencion - 1);
                     AgregarContacto.agregarContacto(contacto);
                     new PersonaDAO().agregar(contacto);
                 }               
