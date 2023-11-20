@@ -1,21 +1,10 @@
 [
-{"nombre": "juan", "telelfono": "123", "fecha": "2024-01-01", "intencion": -1},
 {"nombre": "veronica", "telelfono": "1234", "fecha": "2024-01-02", "intencion": 0},
-{"nombre": "jose", "telelfono": "1235", "fecha": "2024-01-03", "intencion": -1},
-{"nombre": "sara", "telelfono": "1236", "fecha": "2024-01-04", "intencion": 1},
-{"nombre": "julieta", "telelfono": "1237", "fecha": "2024-01-05", "intencion": 2},
 {"nombre": "pedro", "telelfono": "1238", "fecha": "2024-01-06", "intencion": -1},
-{"nombre": "sofia", "telelfono": "1239", "fecha": "2024-01-07", "intencion": 2},
-{"nombre": "sandra", "telelfono": "12310", "fecha": "2024-01-08", "intencion": 0},
-{"nombre": "melisa", "telelfono": "12311", "fecha": "2024-01-09", "intencion": 1},
-{"nombre": "felipe", "telelfono": "12312", "fecha": "2024-01-10", "intencion": -1},
-{"nombre": "mariano", "telelfono": "7777", "fecha": "2025-06-05", "intencion": -1},
-{"nombre": "1231", "telelfono": "1231", "fecha": "0001-12-11", "intencion": -1},
-{"nombre": "231231", "telelfono": "321313213", "fecha": "0001-02-01", "intencion": -1},
-{"nombre": "dasa", "telelfono": "dasad", "fecha": "0001-02-01", "intencion": -1},
-{"nombre": "123w13214314", "telelfono": "34151rqaq", "fecha": "0001-01-01", "intencion": -1},
-{"nombre": "nuevousuario", "telelfono": "nuevousuario", "fecha": "0001-01-01", "intencion": -1},
-{"nombre": "1", "telelfono": "2", "fecha": "0003-02-01", "intencion": -1},
 {"nombre": "hola", "telelfono": "3121", "fecha": "0003-02-01", "intencion": -1},
-{"nombre": "nuevo", "telelfono": "usuario", "fecha": "0003-02-01", "intencion": 2}
+{"nombre": "1231", "telelfono": "1321", "fecha": "0100-01-01", "intencion": -1},
+{"nombre": "sofia", "telelfono": "1239", "fecha": "2024-01-07", "intencion": 2},
+{"nombre": "ro", "telelfono": "ro", "fecha": "0003-02-01", "intencion": -1},
+{"nombre": "123", "telelfono": "1231", "fecha": "2033-02-01", "intencion": -1},
+{"nombre": "nueva", "telelfono": "nueva", "fecha": "0003-02-01", "intencion": 2}
 ]

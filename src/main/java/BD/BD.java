@@ -14,7 +14,6 @@ import java.sql.SQLException;
  */
 public class BD {
     private static Connection connection;
-
     private static String driver = "com.mysql.jdbc.Driver";
     private static String url = "jdbc:mysql://sql10.freemysqlhosting.net:3306/sql10660697";
     private static String user = "sql10660697";
